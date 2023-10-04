@@ -36,7 +36,7 @@ This project showcases various methods for rendering the Mandelbrot set on a can
 
 To use this program:
 
-1. Build and run the application.
+1. Build and run the application. (src/main/java/com/example/mandelbrotset2/Main.java)
 2. Choose the mode (sequential, parallel, or distributed) based on your requirements.
 3. Specify the canvas size.
 4. Render the Mandelbrot set, and the resulting image will be saved as a PNG or JPEG file.
