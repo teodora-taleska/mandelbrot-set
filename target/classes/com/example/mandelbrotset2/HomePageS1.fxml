@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.92" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to left, rgba(255,0,0,0), rgba(6,85,28,1));" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mandelbrotset2.Scene1Controller">
+   <children>
+      <Label layoutX="231.0" layoutY="123.0" style="-fx-font-family: &quot;Times New Roman&quot;, Times, serif;" text="Mandelbrot Set" textFill="WHITE">
+         <font>
+            <Font size="57.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <input>
+                  <DropShadow />
+               </input>
+               <color>
+                  <Color red="0.49824562668800354" green="0.9473684430122375" blue="0.6479532122612" opacity="0.46000000834465027" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Label>
+      <Label layoutX="335.0" layoutY="247.0" style="-fx-font-family: &quot;Times New Roman&quot;, Times, serif;" text="Select mode:" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.8369070887565613" green="0.9684210419654846" blue="0.8106042742729187" opacity="0.5699999928474426" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Label>
+      <Label layoutX="279.0" layoutY="369.0" style="-fx-font-family: &quot;Times New Roman&quot;, Times, serif;" text="SIZE:" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="widthSpinner" initialValue="800" layoutX="369.0" layoutY="371.0" prefHeight="26.0" prefWidth="62.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </Spinner>
+      <Spinner fx:id="heightSpinner" initialValue="600" layoutX="473.0" layoutY="371.0" prefHeight="26.0" prefWidth="62.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </Spinner>
+      <Label layoutX="448.0" layoutY="375.0" text="x" textFill="WHITE" />
+      <Label layoutX="551.0" layoutY="375.0" text="px" textFill="WHITE" />
+      <Button fx:id="startButton" alignment="CENTER" layoutX="339.0" layoutY="464.0" mnemonicParsing="false" onAction="#displayMandelbrot" onMouseEntered="#handleMouseEnter" onMouseExited="#handleMouseExit" prefHeight="46.0" prefWidth="122.0" style="-fx-background-color: black; -fx-background-radius: 25; -fx-font-family: &quot;Times New Roman&quot;, Times, serif;" text="START" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow height="56.42" offsetX="5.0" offsetY="8.0" radius="32.4675" width="75.45">
+               <color>
+                  <Color red="0.10999999940395355" green="0.10670000314712524" blue="0.10670000314712524" opacity="0.595890462398529" />
+               </color>
+            </DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <RadioButton fx:id="seqButton" layoutX="187.0" layoutY="287.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0" text="Sequential" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="Mode" />
+         </toggleGroup>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <RadioButton fx:id="parButton" layoutX="347.0" layoutY="287.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0" text="Parallel" textFill="WHITE" textOverrun="WORD_ELLIPSIS" toggleGroup="$Mode">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <RadioButton fx:id="disButton" layoutX="504.0" layoutY="287.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0" text="Distributed" textFill="WHITE" textOverrun="WORD_ELLIPSIS" toggleGroup="$Mode">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+   </children>
+   <effect>
+      <DropShadow>
+         <color>
+            <Color opacity="0.9520547986030579" />
+         </color>
+      </DropShadow>
+   </effect>
+</AnchorPane>
